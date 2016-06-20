@@ -6,16 +6,17 @@ public class MonthPay{
 
         System.out.print("Loan Amount :");
         double acount = input.nextDouble();
-        double count = acount;
+        double monthPay = 0;
+        double monthRate = 0;
         System.out.print("Number of Years :");
         int year = input.nextInt();
         System.out.println("Interest Rate           Monthly Payment         Total  Payment");
         for(double rate = 5.0;rate <= 8.0;rate+=0.125){
            for(int i = 0;i < year;i++){
-               count*=(1+rate/100);
+               monthRate = rate/12/100;
+               monthPay = (acount * monthRate * Math.pow((1 + monthRate),12*year))/(Math.pow((1+monthRate),12*year)-1);
            }
-           System.out.printf("%f%%            %.2f        %.2f\n",rate,count/(12*year),count);
-           count =  acount;
+           System.out.printf("%.3f%%           %.2f        %.2f\n",rate,monthPay,monthPay*12*year);
         }
     }
 }
