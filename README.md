@@ -1,2 +1,2 @@
 # myjava
-this is my java learn file .
+This is my java learn note
