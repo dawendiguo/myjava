@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class ImageViewer extends JFanel{
-    private Java.awt.Image Image;
+public class ImageViewer extends JPanel{
+    private java.awt.Image image;
     private boolean stretched = true;
 
     private int xCoordinate;
@@ -21,7 +21,7 @@ public class ImageViewer extends JFanel{
 
         if(image != null)
             if(isStretched())
-                g.drawImage(image.xCoordinate,yCoordinate,getWidth(),getHeight(),this);
+                g.drawImage(image,xCoordinate,yCoordinate,getWidth(),getHeight(),this);
             else
                 g.drawImage(image,xCoordinate,yCoordinate,this);
     }
@@ -34,4 +34,28 @@ public class ImageViewer extends JFanel{
         this.image = image;
         repaint();
     }
+    public boolean isStretched(){
+	    return stretched;
+    }
 
+    public void setSretched(boolean stretched){
+	    this.stretched=stretched;
+	    repaint();
+    }
+    public int getXcoordinate(){
+	    return xCoordinate;
+    }
+    public void setXcoordinate(int xCoordinate){
+	    this.xCoordinate=xCoordinate;
+	    repaint();
+    }
+
+    public int getYCoordinate(){
+	    return yCoordinate;
+    }
+
+    public void setYCoordinate(int yCoordinate){
+	    this.yCoordinate=yCoordinate;
+	    repaint();
+    }
+}
