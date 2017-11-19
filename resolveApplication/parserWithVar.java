@@ -1,4 +1,3 @@
-package test;
 class ParserException extends Exception{
     String errStr;
 
@@ -60,7 +59,7 @@ class ParserWithVar{
 
             getToken();
 
-            if(!token.equals("-")){
+            if(!token.equals("=")){
                 putBack();
                 //恢复旧的表达式
                 token = new String(temptoken);
@@ -222,7 +221,7 @@ class ParserWithVar{
 
         private void putBack(){
             if(token == EOF) return;
-            for(int i = 0;i<token.length();i++) expIdx++;
+            for(int i = 0;i<token.length();i++) expIdx--;
         }
 
         private void handErr(int error)throws ParserException{

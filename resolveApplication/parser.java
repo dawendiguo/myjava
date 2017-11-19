@@ -106,7 +106,7 @@ class Parser{
 
         result = evalExp5();
 
-        if(token.equals('^')){
+        if(token.equals("^")){
             getToken();
 
             partialResult = evalExp4();

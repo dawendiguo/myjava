@@ -4,7 +4,7 @@ class PDemo{
 public static void main(String[] args)throws IOException{
     String expr ;
     BufferedReader p =new BufferedReader(new InputStreamReader(System.in));
-    Parser pr = new Parser();
+    ParserWithVar pr = new ParserWithVar();
     System.out.println("enter a empty expresion to stop");
     for(;;){
         System.out.println("输入公式");
