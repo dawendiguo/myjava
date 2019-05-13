@@ -1,2 +1,3 @@
-# myjava
-This is my java learn note
+这是大温帝国的java学习仓库
+转载请注明
+未经许可,禁示用于商业用途。

@@ -1,0 +1,36 @@
+digraph G{
+    fontname="KaiTi"
+    fontsize=13
+    rankdir="BT"
+    
+    node[
+    fontname="KaiTi"
+    fontsize=12
+    shape="record"
+    ]
+
+    main [
+    label = "{
+      Main|\l|\l
+    }"]
+
+    pagemaker [
+      label = "{
+      PageMaker| \l|makeWelcomePage
+    }"]
+
+    htmlwriter [
+      label = "{
+      HtmlWriter|writer|title\lparagraph\llink\lmailto\lclose
+      }"]
+
+    database [
+      label = "{
+      Database| \l|getProperties
+      }"
+    ]
+
+    main->pagemaker[label = "Uses"]
+    pagemaker->htmlwriter[label = "Uses"]
+    pagemaker->database[label = "Uses"]
+}

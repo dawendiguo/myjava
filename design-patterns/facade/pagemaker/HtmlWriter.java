@@ -1,0 +1,43 @@
+package pagemaker;
+
+import java.io.Writer;
+import java.io.IOException;
+
+public class HtmlWriter{
+        private Writer writer;
+        public HtmlWriter(Writer writer){
+                this.writer = writer;
+        }
+
+        //start html and set title
+        public void title(String title)throws IOException{
+                writer.write("<html>");
+                writer.write("<head>");
+                writer.write("<title>" + title + "</title>");
+                writer.write("</head>");
+                writer.write("<body>\n");
+                writer.write("<h1>" + title + "</h1>");
+        }
+
+        //write paragraph 
+        public void paragraph(String msg)throws IOException{
+                writer.write("<p>" + msg + "</p>");
+        }
+
+        //write a link 
+        public void link(String href,String caption)throws IOException{
+                paragraph("<a href = \"" + href + "\">" + caption + "</a>");
+        }
+
+        //wirte mail 
+        public void mailto(String mailaddr,String username)throws IOException{
+                link("mailTO:"+mailaddr,username);
+        }
+
+        //over html
+        public void close()throws IOException{
+                writer.write("<body>");
+                writer.write("</html>\n");
+                writer.close();
+        }
+}
