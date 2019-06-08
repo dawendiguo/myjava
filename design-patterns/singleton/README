@@ -1,0 +1,2 @@
+1.singleton pattern is a method focus a class have only one object init.
+2.usually use with facade \ abstractFactory \ builder \ prototype
