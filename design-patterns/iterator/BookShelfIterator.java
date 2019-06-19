@@ -1,8 +1,8 @@
 public class BookShelfIterator implements Iterator{
-        private BookShelf bookshelf;
+        private ListBookShelf bookshelf;
         private int index;
 
-        public BookShelfIterator(BookShelf bookshelf){
+        public BookShelfIterator(ListBookShelf bookshelf){
                 this.bookshelf = bookshelf;
                 this.index = 0;
         }
